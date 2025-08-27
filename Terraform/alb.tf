@@ -64,15 +64,16 @@ resource "aws_lb_listener" "alb_http_listener" {
 
 # create a listener on port 443 with forward action
 # terraform aws create listener
-resource "aws_lb_listener" "alb_https_listener" {
-  load_balancer_arn  = aws_lb.application_load_balancer.arn
-  port               = 443
-  protocol           = "HTTPS"
-  ssl_policy         = "ELBSecurityPolicy-2016-08"
-  certificate_arn    = var.ssl_certificate_arn
+# comment this block of code out IF you are not setting up a domain name
+#resource "aws_lb_listener" "alb_https_listener" {
+#  load_balancer_arn  = aws_lb.application_load_balancer.arn
+#  port               = 443
+#  protocol           = "HTTPS"
+#  ssl_policy         = "ELBSecurityPolicy-2016-08"
+#  certificate_arn    = var.ssl_certificate_arn
 
-  default_action {
-    type             = "forward"
-    target_group_arn = aws_lb_target_group.alb_target_group.arn
-  }
-}
+#  default_action {
+#    type             = "forward"
+#    target_group_arn = aws_lb_target_group.alb_target_group.arn
+#  }
+#}
