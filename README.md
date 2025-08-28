@@ -1,4 +1,4 @@
-# 🌐 AWS 3-Tier VPC Architecture with Terraform
+# 🌐 AWS 3-Tier VPC Architecture with Terraform  
 
 This project provisions a modular, cost-aware 3-tier VPC architecture using Terraform. It demonstrates infrastructure automation, reproducibility, and secure cloud design.
 
